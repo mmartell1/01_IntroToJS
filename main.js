@@ -1,5 +1,4 @@
-console.log("This is going to be my first commit! If I finish this program soon enough, I'm going to eat a sandwhich as a reward. Yum!");
-
+// Create globals for Exit Code and Fruit Array
 var _FRUITS = [];
 var _EXIT_CODE = 999;
 
@@ -44,7 +43,7 @@ function CheckFruitsFromUserInput() {
 	while (true) {
 
 		// Input from user
-		var fruitToCheck = prompt("Please enter a fruit to check.  (type " + _EXIT_CODE + " to quit)", "<name goes here>");
+		var fruitToCheck = prompt("Please enter a fruit to check.  (type " + _EXIT_CODE + " to quit)", "");
 
 		// See if we need to exit the loop
 		if (fruitToCheck == _EXIT_CODE) {
@@ -53,14 +52,10 @@ function CheckFruitsFromUserInput() {
 
 		// Check if the fruit is in the fruit list
 		if (IsFruitInList(fruitToCheck, _FRUITS)) {
-			console.log('yep');
+			alert('You guessed one of the fruits!');
 		} else {
-			console.log('nope');
+			alert('NOPE');
 		}
 
 	}
 }
-
-// Run the program
-InitializeVariables();
-CheckFruitsFromUserInput();
